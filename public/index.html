@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction | Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <nav class="navbar">
+                <img src="./assets/imgs/logo-gj.png" alt="logo">
+                <h2>Calcula tu presupuesto</h2>
+            </nav>
+        </header>
+        <!-- section -->
+        <section id="form-data" style=" background-image: url(./assets/imgs/fondo.jpg)">
+            <div id="filter-img"></div>
+            <div id="container-2">
+                <form id="form-1" action="#" onsubmit="send(event);">
+                    <div id="left-side">
+                        <div class="form-container">
+                            <!-- form row -->
+                            <div class="row-form">
+                                <div class="form-field">
+                                    <label for="">Numero de unidades</label>
+                                    <input type="number" name="unids" id="unids" min="1" max="1000" placeholder="Ingrese el numero de unidades" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="">Medicion de la propiedad (m2)</label>
+                                    <input type="number" name="metro2" id="metro2" min="1" placeholder="Ingrese la medicion" required>
+                                </div>
+                            </div>
+                            <!-- form row -->
+                            <div class="row-form">
+                                <div class="form-field">
+                                    <label for="">Numero de equipos</label>
+                                    <input type="number" name="numMachines" id="numMachines" min="1" placeholder="Ingrese el numero de equipos" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="">Tipo</label>
+                                    <select name="typeOfHousing" id="typeOfHousing" required>
+                                        <option value="">Seleccione una opcion</option>
+                                        <option value="1">Residencial</option>
+                                        <option value="2">Comercial</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- form row -->
+                            <div class="row-form">
+                                <div class="form-field">
+                                    <label for="">Numero de pisos</label>
+                                    <input type="number" name="numFloors" id="numFloors" min="1" placeholder="Ingrese el numero de pisos" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="">Cantidad de torres</label>
+                                    <input type="number" name="numTowers" id="numTowers" min="1" placeholder="Ingrese la cantidad de torres" required>
+                                </div>
+                            </div>
+                            <!-- form row -->
+                            <div class="row-form">
+                                <div class="form-field">
+                                    <label for="">Puestos de seguridad</label>
+                                    <input type="number" name="securityPosts" id="securityPosts" min="1" placeholder="Ingrese la cantidad de puestos" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="">Estrato</label>
+                                    <select name="stratum" id="stratum" required>
+                                        <option value="">Seleccione una opcion</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- form row -->
+                            <div class="row-form">
+                                <div class="form-field w-100">
+                                    <label for="">Medicion de zonas comunes (m2)</label>
+                                    <input type="number" name="commonZones" id="commonZones" min="1" placeholder="Ingrese la medicion de las zonas comunes" required>
+                                </div>
+                            </div>
+                            <!-- form row -->
+                            <div class="row-form">
+                                <div class="form-field w-100 d-flex">
+                                    <button>Calcular</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right-side">
+                        <div class="result-container">
+                            <div class="estimate-result">
+                                <div id="propertyValue" class="property-value">
+                                    $0
+                                </div>
+                                <div class="estimate-label">
+                                    Presupuesto estimado
+                                </div>
+                            </div>
+                            <div class="house-icon">
+                                <img src="./assets/imgs/casa.png" alt="casa-icono">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            Página creada por Hipal.
+        </footer>
+        <div style="margin-top: 20px; background-color: lightgreen; height: 400px; display: none;">
+            <div style="width: 100px; height: 100px; background-color: red;"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.7.0/countUp.min.js" integrity="sha512-HgaWwlui8qKvAla8mk8Vi1wcomOPDFc7KvDVahaqCUReVuWdol8L2yuSZ+Eu5Cs3bbhyd7okEmw+JgLuYZSvfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
