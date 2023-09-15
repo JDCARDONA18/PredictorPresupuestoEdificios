@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-PORT= os.getenv("PORT", 8000)
+PORT= int(os.getenv("PORT", 8000))
 app = FastAPI()
 origins = ["*"]
 
