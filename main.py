@@ -2,11 +2,14 @@ import pickle
 from fastapi.encoders import jsonable_encoder
 import uvicorn
 import pandas as pd
+import os
 from typing import List
 from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+
+PORT= os.getenv("PORT", 8000)
 app = FastAPI()
 origins = ["*"]
 
@@ -49,4 +52,4 @@ def predict(edificio: Edificio):
   return {'prediction_result': result }
 
 if __name__=="__main__":
-  uvicorn.run(app, host="0.0.0.0")
+  uvicorn.run(app, host="0.0.0.0", port=PORT)
