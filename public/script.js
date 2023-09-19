@@ -2,7 +2,7 @@ function send(event) {
 
     event.preventDefault();
 
-    const url = "http://127.0.0.1:8000/Predict-Presupuesto";
+    const url = `${BASE_URL}/Predict-Presupuesto`;
     const unids = Number(document.getElementById("unids").value);
     const metro2 = Number(document.getElementById("metro2").value);
     const numMachines = Number(document.getElementById("numMachines").value);

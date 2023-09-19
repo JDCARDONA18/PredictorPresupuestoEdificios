@@ -169,3 +169,13 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+.logo-rigth {
+    font-family: arial,serif;
+    font-size: 18px;
+    color: white;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+}
