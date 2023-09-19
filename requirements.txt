@@ -1,0 +1,4 @@
+pandas
+fastapi
+uvicorn
+scikit-learn==1.2.2
