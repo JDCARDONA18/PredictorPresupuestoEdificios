@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction | Frontend</title>
+    <title>Calcula tu presupuesto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,11 @@
         <header>
             <nav class="navbar">
                 <img src="./assets/imgs/logo-gj.png" alt="logo">
-                <h2>Calcula tu presupuesto</h2>
+                <h2 style="font-family:arial;">Calcula tu presupuesto</h2>
+                <div>
+                    <img style="margin-left: auto; margin-right: 20px; height: 120px; " src="./assets/imgs/Logo_Blanco_HIPAL.png" alt="logo">
+                </div>
+                
             </nav>
         </header>
         <!-- section -->
@@ -25,22 +29,22 @@
                             <!-- form row -->
                             <div class="row-form">
                                 <div class="form-field">
-                                    <label for="">Numero de unidades</label>
+                                    <label style="font-family:arial;" for="">Numero de unidades</label>
                                     <input type="number" name="unids" id="unids" min="1" max="1000" placeholder="Ingrese el numero de unidades" required>
                                 </div>
                                 <div class="form-field">
-                                    <label for="">Medicion de la propiedad (m2)</label>
+                                    <label style="font-family:arial;" for="">Medicion de la propiedad (m2)</label>
                                     <input type="number" name="metro2" id="metro2" min="1" placeholder="Ingrese la medicion" required>
                                 </div>
                             </div>
                             <!-- form row -->
                             <div class="row-form">
                                 <div class="form-field">
-                                    <label for="">Numero de equipos</label>
+                                    <label style="font-family:arial;" for="">Numero de equipos</label>
                                     <input type="number" name="numMachines" id="numMachines" min="1" placeholder="Ingrese el numero de equipos" required>
                                 </div>
                                 <div class="form-field">
-                                    <label for="">Tipo</label>
+                                    <label style="font-family:arial;" for="">Tipo</label>
                                     <select name="typeOfHousing" id="typeOfHousing" required>
                                         <option value="">Seleccione una opcion</option>
                                         <option value="1">Residencial</option>
@@ -51,22 +55,22 @@
                             <!-- form row -->
                             <div class="row-form">
                                 <div class="form-field">
-                                    <label for="">Numero de pisos</label>
+                                    <label style="font-family:arial;" for="">Numero de pisos</label>
                                     <input type="number" name="numFloors" id="numFloors" min="1" placeholder="Ingrese el numero de pisos" required>
                                 </div>
                                 <div class="form-field">
-                                    <label for="">Cantidad de torres</label>
+                                    <label style="font-family:arial;" for="">Cantidad de torres</label>
                                     <input type="number" name="numTowers" id="numTowers" min="1" placeholder="Ingrese la cantidad de torres" required>
                                 </div>
                             </div>
                             <!-- form row -->
                             <div class="row-form">
                                 <div class="form-field">
-                                    <label for="">Puestos de seguridad</label>
+                                    <label style="font-family:arial;" for="">Puestos de seguridad</label>
                                     <input type="number" name="securityPosts" id="securityPosts" min="1" placeholder="Ingrese la cantidad de puestos" required>
                                 </div>
                                 <div class="form-field">
-                                    <label for="">Estrato</label>
+                                    <label style="font-family:arial;" for="">Estrato</label>
                                     <select name="stratum" id="stratum" required>
                                         <option value="">Seleccione una opcion</option>
                                         <option value="1">1</option>
@@ -81,7 +85,7 @@
                             <!-- form row -->
                             <div class="row-form">
                                 <div class="form-field w-100">
-                                    <label for="">Medicion de zonas comunes (m2)</label>
+                                    <label style="font-family:arial;" for="">Medicion de zonas comunes (m2)</label>
                                     <input type="number" name="commonZones" id="commonZones" min="1" placeholder="Ingrese la medicion de las zonas comunes" required>
                                 </div>
                             </div>
@@ -99,19 +103,19 @@
                                 <div id="propertyValue" class="property-value">
                                     $0
                                 </div>
-                                <div class="estimate-label">
+                                <div style="font-family:arial;" class="estimate-label">
                                     Presupuesto estimado
                                 </div>
                             </div>
                             <div class="house-icon">
-                                <img src="./assets/imgs/casa.png" alt="casa-icono">
+                                <img src="./assets/imgs/control.png" alt="control-icono">
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
         </section>
-        <footer>
+        <footer style="font-family:arial;">
             Página creada por Hipal.
         </footer>
         <div style="margin-top: 20px; background-color: lightgreen; height: 400px; display: none;">
