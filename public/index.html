@@ -93,12 +93,13 @@
                             <!-- form row -->
                             <div class="row-form">
                                 <div class="form-field w-100 d-flex">
-                                    <button>Calcular</button>
+                                    <button id="calcBtn">Calcular</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div id="right-side">
+                        <!-- Panel 1 - Presupuesto -->
                         <div class="result-container">
                             <div class="estimate-result">
                                 <div class="property-value" style=" justify-content: center; display: flex;">
@@ -115,6 +116,42 @@
                             <div class="house-icon">
                                 <img src="./assets/imgs/control.png" alt="control-icono" style="filter: brightness(0) invert(1);">
                             </div>
+                        </div>
+
+                        <!-- Panel 2 - Vecinos más cercanos -->
+                        <div class="result-container">
+                            <div class="estimate-result" style="display: flex; flex-direction: column; height: 100%; justify-content: center; gap: 6px;">
+                                <!-- Resultado 1 -->
+                                <div class="property-value" style=" justify-content: center; display: flex;">
+                                    $
+                                    <div id="propertyValueV1" class="property-value">
+                                        0
+                                    </div>
+                                </div>
+
+                                <!-- Resultado 2 -->
+                                <div class="property-value" style=" justify-content: center; display: flex;">
+                                    $
+                                    <div id="propertyValueV2" class="property-value">
+                                        0
+                                    </div>
+                                </div>
+
+                                <!-- Resultado 3 -->
+                                <div class="property-value" style=" justify-content: center; display: flex;">
+                                    $
+                                    <div id="propertyValueV3" class="property-value">
+                                        0
+                                    </div>
+                                </div>
+
+                                <div style="font-family:arial; margin-top: 6px;" class="estimate-label">
+                                    Presupuestos cercanos
+                                </div>
+                            </div>
+                            <!-- <div class="house-icon">
+                                <img src="./assets/imgs/control.png" alt="control-icono" style="filter: brightness(0) invert(1);">
+                            </div> -->
                         </div>
                     </div>
                 </form>

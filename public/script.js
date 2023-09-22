@@ -25,10 +25,21 @@ function send(event) {
         zonas_comunes: commonZones
     }
 
+    const boton = document.getElementById("calcBtn");
+    boton.disabled = true;
+    boton.innerText = "Cargando...";
+
+
     axios.post(url, data).then((response) => {
         console.log(response);
-        const result = response?.data?.prediction_result | 0;
+        const result = response?.data?.prediction_result || 0;
+        const [V1, V2, V3] = response?.data?.nearest_neighbors || [];
         countUpPropertyValue(result);
+        countUpPropertyValue(V1, 'propertyValueV1');
+        countUpPropertyValue(V2, 'propertyValueV2');
+        countUpPropertyValue(V3, 'propertyValueV3');
+        boton.disabled = false;
+        boton.innerText = "Calcular";
     }).catch((error) => {
         console.log(error);
     });
@@ -42,7 +53,7 @@ function updatePropertyValue(value) {
     document.getElementById("propertyValue").innerHTML = text;
 }
 
-function countUpPropertyValue(value) {
+function countUpPropertyValue(value, elementId = 'propertyValue') {
 
     const options = {
         startVal: 0,
@@ -51,7 +62,7 @@ function countUpPropertyValue(value) {
         end: 32000000
     };
 
-    let demo = new CountUp('propertyValue', 0, Number(value), 0, 2, options);
+    let demo = new CountUp(elementId, 0, Number(value), 0, 2, options);
 
     if (!demo.error) {
         demo.start();

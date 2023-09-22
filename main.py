@@ -49,7 +49,11 @@ def predict(edificio: Edificio):
 
   df_input = pd.DataFrame(edificio.model_dump(), index=[0])
   result = nuevo_modelo.predict(df_input)[0]
-  return {'prediction_result': result }
+  df = pd.read_excel("basededatosfinal.xlsx")
+  y = df["presupuesto_mensual"]
+  neighbors = nuevo_modelo.kneighbors(df_input, n_neighbors=3)
+  nearest_neighbors =   list(y[neighbors[1][0]])
+  return {'prediction_result': result,'nearest_neighbors': nearest_neighbors}
 
 if __name__=="__main__":
   uvicorn.run(app, host="0.0.0.0", port=PORT)

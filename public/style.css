@@ -60,6 +60,7 @@ section#form-data form div#right-side {
     width: 30%;
     display: flex;
     align-items: start;
+    flex-direction: column;
 }
 
 section#form-data form div.form-container {
@@ -178,4 +179,8 @@ footer {
     display: flex;
     margin-left: auto;
     margin-right: 20px;
+}
+
+button:disabled {
+    opacity: 0.65;
 }
